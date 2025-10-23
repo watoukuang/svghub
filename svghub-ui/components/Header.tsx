@@ -78,14 +78,13 @@ export default function Header({toggleSidebar}: HeaderProps): React.ReactElement
                 {/* 移动端保留品牌，桌面端交给侧边栏显示 */}
                 <Link href="/" className="flex items-center lg:hidden">
                     <img
-                        src={(theme === 'dark' || (theme === 'system' && systemDark)) ? '/logo-dark.png' : '/logo.png'}
-                        onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/logo.png'; }}
-                        alt="SvgHub Logo"
-                        className="h-10 w-auto select-none"
+                        src="/logo-fox.svg"
+                        alt="SVG Hub Logo"
+                        className="h-12 w-12 select-none"
                     />
                     <span
                         className="text-xl md:text-2xl font-semibold tracking-tight leading-none select-none bg-gradient-to-r from-blue-600 to-emerald-600 dark:from-sky-400 dark:to-emerald-300
-                        bg-clip-text text-transparent">SvgHub</span>
+                        bg-clip-text text-transparent ml-3">SVG HUB</span>
                 </Link>
 
                 {/* 桌面端左侧：关于我们 */}
@@ -185,12 +184,12 @@ export default function Header({toggleSidebar}: HeaderProps): React.ReactElement
                     )}
                 </div>
 
-                <Link
-                    href="/pricing"
-                    className="inline-flex items-center text-sm font-medium px-3 py-1.5 md:px-4 rounded-full whitespace-nowrap bg-gradient-to-r from-emerald-500 to-lime-500 text-white shadow-sm hover:opacity-90 transition-opacity dark:from-emerald-400 dark:to-lime-400"
-                >
-                    价格
-                </Link>
+                {/*<Link*/}
+                {/*    href="/pricing"*/}
+                {/*    className="inline-flex items-center text-sm font-medium px-3 py-1.5 md:px-4 rounded-full whitespace-nowrap bg-gradient-to-r from-emerald-500 to-lime-500 text-white shadow-sm hover:opacity-90 transition-opacity dark:from-emerald-400 dark:to-lime-400"*/}
+                {/*>*/}
+                {/*    价格*/}
+                {/*</Link>*/}
 
                 <button
                     onClick={() => setLoginOpen(true)}

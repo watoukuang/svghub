@@ -6,11 +6,11 @@ export default function Footer(): React.ReactElement {
         <footer
             className="mt-8 border-t border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-[#141517]/70 backdrop-blur">
             <div className="px-4 lg:px-12 max-w-screen-2xl mx-auto py-6 md:py-8">
-                <div className="grid gap-6 md:gap-8 md:grid-cols-5 items-start">
+                <div className="grid gap-6 md:gap-8 md:grid-cols-5 items-start text-center md:text-left">
                     {/* 左侧品牌与备案（占两列） */}
                     <div className="md:col-span-2">
-                        <div className="flex items-center gap-2 mb-2">
-                            <img src="/logo.png" alt="WaTouKuang Logo" className="h-7 w-7"/>
+                        <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
+                            <img src="/logo-fox.svg" alt="SVG Hub Logo" className="h-9 w-9"/>
                             <span className="text-base md:text-lg font-semibold">SVG HUB</span>
                         </div>
                         <div className="space-y-1.5 text-xs md:text-[13px] text-gray-600 dark:text-gray-400">
@@ -58,7 +58,7 @@ export default function Footer(): React.ReactElement {
                                     href="mailto:contact@svghub.org">联系邮箱：contact@svghub.org</a>
                             </li>
                             <li>
-                                <div className="flex items-center gap-3 pt-1">
+                                <div className="flex items-center gap-3 pt-1 justify-center md:justify-start">
                                     {/* Discord */}
                                     <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord"
                                        className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 hover:text-indigo-600 hover:border-indigo-300 dark:border-[#2a2c31] dark:text-gray-300 dark:hover:text-indigo-400">

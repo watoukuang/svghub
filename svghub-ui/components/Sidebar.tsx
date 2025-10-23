@@ -175,22 +175,22 @@ export default function Sidebar(): React.ReactElement {
         );
     }
   };
-  // 方案A：动态热点（TopN + 编辑推荐），保持样式
+  // 方案A：统一蓝绿色系主题，专业简洁
   const categoryMap: Record<IconCategory, { name: string; slug: string; colorIcon: string; colorBar: string }>= {
-    base:    { name: '通用/基础',   slug: 'base',    colorIcon: 'text-gray-400',                    colorBar: 'bg-gray-400' },
-    arrows:  { name: '箭头与导航',   slug: 'arrows',  colorIcon: 'text-amber-500 dark:text-amber-400', colorBar: 'bg-amber-500 dark:bg-amber-400' },
-    media:   { name: '媒体与控制',   slug: 'media',   colorIcon: 'text-indigo-500',                  colorBar: 'bg-indigo-500' },
-    files:   { name: '文件与文档',   slug: 'files',   colorIcon: 'text-sky-500',                     colorBar: 'bg-sky-500' },
-    editor:  { name: '编辑与排版',   slug: 'editor',  colorIcon: 'text-rose-500',                    colorBar: 'bg-rose-500' },
-    social:  { name: '通信与社交',   slug: 'social',  colorIcon: 'text-violet-500',                  colorBar: 'bg-violet-500' },
-    finance: { name: '商务与金融',   slug: 'finance', colorIcon: 'text-emerald-500',                 colorBar: 'bg-emerald-500' },
-    system:  { name: '系统与状态',   slug: 'system',  colorIcon: 'text-orange-500',                  colorBar: 'bg-orange-500' },
-    devices: { name: '设备与硬件',   slug: 'devices', colorIcon: 'text-teal-500',                    colorBar: 'bg-teal-500' },
-    maps:    { name: '地图与出行',   slug: 'maps',    colorIcon: 'text-cyan-500',                    colorBar: 'bg-cyan-500' },
-    security:{ name: '安全与隐私',   slug: 'security',colorIcon: 'text-red-500',                     colorBar: 'bg-red-500' },
-    devops:  { name: '开发与运维',   slug: 'devops',  colorIcon: 'text-fuchsia-500',                 colorBar: 'bg-fuchsia-500' },
-    brands:  { name: '品牌与平台',   slug: 'brands',  colorIcon: 'text-yellow-500',                  colorBar: 'bg-yellow-500' },
-    ecom:    { name: '电商与产品',   slug: 'ecom',    colorIcon: 'text-lime-500',                    colorBar: 'bg-lime-500' },
+    base:    { name: '通用/基础',   slug: 'base',    colorIcon: 'text-slate-500 dark:text-slate-400',   colorBar: 'bg-slate-500 dark:bg-slate-400' },
+    arrows:  { name: '箭头与导航',   slug: 'arrows',  colorIcon: 'text-blue-600 dark:text-blue-400',     colorBar: 'bg-blue-600 dark:bg-blue-400' },
+    media:   { name: '媒体与控制',   slug: 'media',   colorIcon: 'text-blue-500 dark:text-blue-300',     colorBar: 'bg-blue-500 dark:bg-blue-300' },
+    files:   { name: '文件与文档',   slug: 'files',   colorIcon: 'text-cyan-600 dark:text-cyan-400',     colorBar: 'bg-cyan-600 dark:bg-cyan-400' },
+    editor:  { name: '编辑与排版',   slug: 'editor',  colorIcon: 'text-teal-600 dark:text-teal-400',     colorBar: 'bg-teal-600 dark:bg-teal-400' },
+    social:  { name: '通信与社交',   slug: 'social',  colorIcon: 'text-emerald-600 dark:text-emerald-400', colorBar: 'bg-emerald-600 dark:bg-emerald-400' },
+    finance: { name: '商务与金融',   slug: 'finance', colorIcon: 'text-emerald-500 dark:text-emerald-300', colorBar: 'bg-emerald-500 dark:bg-emerald-300' },
+    system:  { name: '系统与状态',   slug: 'system',  colorIcon: 'text-sky-600 dark:text-sky-400',       colorBar: 'bg-sky-600 dark:bg-sky-400' },
+    devices: { name: '设备与硬件',   slug: 'devices', colorIcon: 'text-teal-500 dark:text-teal-300',     colorBar: 'bg-teal-500 dark:bg-teal-300' },
+    maps:    { name: '地图与出行',   slug: 'maps',    colorIcon: 'text-cyan-500 dark:text-cyan-300',     colorBar: 'bg-cyan-500 dark:bg-cyan-300' },
+    security:{ name: '安全与隐私',   slug: 'security',colorIcon: 'text-blue-700 dark:text-blue-500',     colorBar: 'bg-blue-700 dark:bg-blue-500' },
+    devops:  { name: '开发与运维',   slug: 'devops',  colorIcon: 'text-indigo-600 dark:text-indigo-400', colorBar: 'bg-indigo-600 dark:bg-indigo-400' },
+    brands:  { name: '品牌与平台',   slug: 'brands',  colorIcon: 'text-sky-500 dark:text-sky-300',       colorBar: 'bg-sky-500 dark:bg-sky-300' },
+    ecom:    { name: '电商与产品',   slug: 'ecom',    colorIcon: 'text-emerald-700 dark:text-emerald-500', colorBar: 'bg-emerald-700 dark:bg-emerald-500' },
   };
 
   const counts = ICONS.reduce((acc, i) => {
@@ -203,20 +203,20 @@ export default function Sidebar(): React.ReactElement {
     .sort((a,b) => (counts[b]||0) - (counts[a]||0))[0];
 
   const recoms: MenuItem[] = [
-    { icon: '', name: '最新上传', href: '/?sort=newest', colorIcon: 'text-blue-500 dark:text-blue-400', colorBar: 'bg-blue-500 dark:bg-blue-400' },
-    { icon: '', name: '热门图标', href: `/?category=${topCategory}`, colorIcon: categoryMap[topCategory]?.colorIcon || 'text-purple-500', colorBar: categoryMap[topCategory]?.colorBar || 'bg-purple-500' }
+    { icon: '', name: '最新上传', href: '/?sort=newest', colorIcon: 'text-blue-600 dark:text-blue-400', colorBar: 'bg-blue-600 dark:bg-blue-400' },
+    { icon: '', name: '热门图标', href: `/?category=${topCategory}`, colorIcon: categoryMap[topCategory]?.colorIcon || 'text-emerald-600 dark:text-emerald-400', colorBar: categoryMap[topCategory]?.colorBar || 'bg-emerald-600 dark:bg-emerald-400' }
   ];
 
-    // 热门分类：精简至8个核心分类，提升选择效率
+    // 热门分类：精简至8个核心分类，统一蓝绿色系
     const channels: MenuItem[] = [
-      { icon: "➡️", name: "箭头与导航", href: "/?category=arrows", colorIcon: "text-amber-500 dark:text-amber-400", colorBar: "bg-amber-500 dark:bg-amber-400" },
-      { icon: "▶️", name: "媒体与控制", href: "/?category=media", colorIcon: "text-indigo-500", colorBar: "bg-indigo-500" },
-      { icon: "📄", name: "文件与文档", href: "/?category=files", colorIcon: "text-sky-500", colorBar: "bg-sky-500" },
-      { icon: "✏️", name: "编辑与排版", href: "/?category=editor", colorIcon: "text-rose-500", colorBar: "bg-rose-500" },
-      { icon: "💬", name: "通信与社交", href: "/?category=social", colorIcon: "text-violet-500", colorBar: "bg-violet-500" },
-      { icon: "⚙️", name: "系统与状态", href: "/?category=system", colorIcon: "text-orange-500", colorBar: "bg-orange-500" },
-      { icon: "🏷️", name: "品牌与平台", href: "/?category=brands", colorIcon: "text-yellow-500", colorBar: "bg-yellow-500" },
-      { icon: "🛠️", name: "开发与运维", href: "/?category=devops", colorIcon: "text-fuchsia-500", colorBar: "bg-fuchsia-500" },
+      { icon: "➡️", name: "箭头与导航", href: "/?category=arrows", colorIcon: "text-blue-600 dark:text-blue-400", colorBar: "bg-blue-600 dark:bg-blue-400" },
+      { icon: "▶️", name: "媒体与控制", href: "/?category=media", colorIcon: "text-blue-500 dark:text-blue-300", colorBar: "bg-blue-500 dark:bg-blue-300" },
+      { icon: "📄", name: "文件与文档", href: "/?category=files", colorIcon: "text-cyan-600 dark:text-cyan-400", colorBar: "bg-cyan-600 dark:bg-cyan-400" },
+      { icon: "✏️", name: "编辑与排版", href: "/?category=editor", colorIcon: "text-teal-600 dark:text-teal-400", colorBar: "bg-teal-600 dark:bg-teal-400" },
+      { icon: "💬", name: "通信与社交", href: "/?category=social", colorIcon: "text-emerald-600 dark:text-emerald-400", colorBar: "bg-emerald-600 dark:bg-emerald-400" },
+      { icon: "⚙️", name: "系统与状态", href: "/?category=system", colorIcon: "text-sky-600 dark:text-sky-400", colorBar: "bg-sky-600 dark:bg-sky-400" },
+      { icon: "🏷️", name: "品牌与平台", href: "/?category=brands", colorIcon: "text-sky-500 dark:text-sky-300", colorBar: "bg-sky-500 dark:bg-sky-300" },
+      { icon: "🛠️", name: "开发与运维", href: "/?category=devops", colorIcon: "text-indigo-600 dark:text-indigo-400", colorBar: "bg-indigo-600 dark:bg-indigo-400" },
     ];
     return (
         <aside
@@ -224,9 +224,9 @@ export default function Sidebar(): React.ReactElement {
             {/* 品牌（桌面端作为主品牌展示） */}
             <div className="hidden lg:flex items-center gap-3 py-3 mb-2">
                 <Link href="/" className="flex items-center">
-                    <img src="/logo-svg.svg" alt="SVG Hub Logo" className="h-9 w-9"/>
+                    <img src="/logo-fox.svg" alt="SVG Hub Logo" className="h-12 w-12"/>
                     <span
-                        className="ml-2 text-xl font-semibold tracking-tight bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent dark:from-sky-400 dark:to-emerald-300">SVG HUB</span>
+                        className="ml-3 text-xl font-semibold tracking-tight bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent dark:from-sky-400 dark:to-emerald-300">SVG HUB</span>
                 </Link>
             </div>
             <div className="mb-4 pb-2 lg:pb-4 border-b border-gray-100 dark:border-gray-800 hidden lg:block">

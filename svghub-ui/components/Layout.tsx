@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import MobileNav from './MobileNav';
 import Footer from './Footer';
 import {LayoutProps} from '../types';
 
@@ -77,9 +76,6 @@ export default function Layout({children}: LayoutProps): React.ReactElement {
                     </main>
                 </div>
                 <Footer/>
-                <div className="lg:hidden">
-                    <MobileNav/>
-                </div>
             </div>
         </div>
     );

@@ -46,7 +46,7 @@ export default function Home(): React.ReactElement {
         <Layout>
             <div className="container px-4 md:px-6 py-4 pb-20 lg:pb-4">
                 <div className="mb-6 md:mb-8">
-                    <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 bg-clip-text text-transparent dark:from-sky-400 dark:via-indigo-400 dark:to-emerald-300 headline-glow">
+                    <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3 bg-gradient-to-r from-blue-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-cyan-400 dark:to-emerald-400 headline-glow">
                         SVG 图标库
                     </h1>
                     <p className="text-[13.5px] md:text-base leading-relaxed max-w-2xl subtle-muted">
