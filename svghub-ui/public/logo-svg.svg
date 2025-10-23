@@ -1,0 +1,25 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 外圆背景 -->
+  <circle cx="18" cy="18" r="18" fill="url(#gradient1)"/>
+  
+  <!-- SVG 标识图形 -->
+  <g transform="translate(6, 6)">
+    <!-- 主要形状：代表SVG的矢量特性 -->
+    <path d="M4 4 L20 4 L20 8 L8 8 L8 20 L4 20 Z" fill="white" opacity="0.9"/>
+    <path d="M8 8 L20 8 L20 12 L12 12 L12 20 L8 20 Z" fill="white" opacity="0.7"/>
+    <path d="M12 12 L20 12 L20 16 L16 16 L16 20 L12 20 Z" fill="white" opacity="0.5"/>
+    
+    <!-- 小装饰点 -->
+    <circle cx="16" cy="6" r="1.5" fill="white"/>
+    <circle cx="18" cy="10" r="1" fill="white" opacity="0.8"/>
+    <circle cx="14" cy="18" r="1" fill="white" opacity="0.6"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
